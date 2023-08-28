@@ -1,0 +1,10 @@
+<div class="">
+    <button (click)="onDelete()" class="text-red-500 text-sm hover:border-b hover:border-b-red-500">
+        Удалить
+    </button>
+</div>
+<a routerLink="{{section_id}}/edit" class="flex flex-col gap-4 w-full h-full">
+    <span>{{lesson.name}}</span>
+    <span>{{cabinet.room}}</span>
+    <span>{{showTeacher(lesson.teacher)}}</span>
+</a>

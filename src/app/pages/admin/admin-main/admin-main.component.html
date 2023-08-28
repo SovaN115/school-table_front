@@ -1,0 +1,9 @@
+<section class="admin-main grid gap-4 grid-cols-4 row">
+
+    <app-template-card *ngFor="let template of templates" (deleted)="update()" [name]="template.name" [id]="template.id" [is_selected]="template.is_selected"></app-template-card>
+
+    <div class="p-4 shadow-md rounded-lg flex flex-col gap-4 border border-blue-600 text-blue-600 relative items-center text-center justify-center">
+        <a routerLink="create" class="w-full h-full absolute top-0 left-0"></a>
+        <span>Новый шаблон</span>
+    </div>
+</section>

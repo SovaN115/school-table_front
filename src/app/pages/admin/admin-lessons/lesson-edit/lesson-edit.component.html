@@ -1,0 +1,10 @@
+<section class="admin-teacher-add pt-20">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form flex flex-col w-full p-4 max-w-sm mx-auto justify-center border-blue-600 border rounded-lg gap-4">
+        <h4 class="form-title text-center text-xl">Редактировать предмет</h4>
+        <input formControlName="name" type="text" placeholder="Название предмета" class="px-4 py-2 bg-gray-100 rounded-lg">
+        <select formControlName="teacherId" name="teacher" class="p-2 bg-gray-100 rounded-lg">
+            <option *ngFor="let teacher of teachers" value="{{teacher.id}}">{{teacher.name}} {{teacher.patronymic}}</option>
+        </select>
+        <input type="submit" value="Сохранить" class="px-4 py-2 bg-green-400 rounded-lg text-white">
+    </form>
+</section>

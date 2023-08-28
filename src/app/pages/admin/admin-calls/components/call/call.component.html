@@ -1,0 +1,16 @@
+<td class="p-4 border">
+    <span>{{lesson}}</span>
+</td>
+<td class="p-4 border">
+    <span [hidden]="showStartInput" (click)="openStartInput()">{{show(start)}}</span>
+    <input [hidden]="!showStartInput" (keydown.enter)="updateStart()" (blur)="updateStart()" type="time" value="{{start}}" [formControl]="startInput">
+</td>
+<td class="p-4 border">
+    <span [hidden]="showFinishInput" (click)="openFinishInput()">{{show(finish)}}</span>
+    <input [hidden]="!showFinishInput" (keydown.enter)="updateFinish()" (blur)="updateFinish()" type="time" [formControl]="finishInput">
+</td>
+<td class="p-4 border">
+    <span [hidden]="showBreakInput" (click)="openBreakInput()">{{show(break)}}</span>
+    <input [hidden]="!showBreakInput" (keydown.enter)="updateBreak()" (blur)="updateBreak()" type="time" value="{{break}}" [formControl]="breakInput">
+</td>
+

@@ -1,0 +1,12 @@
+<section class="admin-teacher-add pt-20">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form flex flex-col w-full p-4 max-w-sm mx-auto justify-center border-blue-600 border rounded-lg gap-4">
+        <h4 class="form-title text-center text-xl">Добавить шаблон</h4>
+        <input formControlName="name" type="text" placeholder="Название шаблона" class="px-4 py-2 bg-gray-100 rounded-lg">
+        <input formControlName="lessons" min="0" max="10" type="number" placeholder="Количество уроков" class="px-4 py-2 bg-gray-100 rounded-lg">
+        <select formControlName="days" name="teacher" class="p-2 bg-gray-100 rounded-lg">
+            <option value="5" >5 дней</option>
+            <option value="6" >6 дней</option>
+        </select>
+        <input type="submit" value="Добавить" class="px-4 py-2 bg-green-400 rounded-lg text-white">
+    </form>
+</section>

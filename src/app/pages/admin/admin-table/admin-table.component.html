@@ -1,0 +1,19 @@
+<section class="admin-teachers">
+    <div class="w-full">
+        <div class="text-center pt-20" [hidden]="displayTable">
+            <span class="text-xl">Для составления таблицы заполните данные о классах</span>
+        </div>
+        <table class="w-full border-collapse overflow-hidden table-fixed border" [hidden]="!displayTable">
+            <tr class="p-4 rounded-lg bg-gray-100">
+                <th class="p-4 border"  [ngStyle]="{'width.px': 100}">Класс</th>
+                <th class="p-4 border"  [ngStyle]="{'width.px': 100}">День недели</th>
+                <th *ngFor="let lesson of lessons; let i = index" class="p-4 border"  [ngStyle]="{'width.px': 128}">{{i + 1}}</th>
+
+            </tr>
+
+            <tr *ngFor="let row of rows; let i = index" (deleted)="update()" [index]="i" [days]="days" [data]="row" class="p-4 rounded-lg" table-row>
+
+            </tr>
+        </table>
+    </div>
+</section>

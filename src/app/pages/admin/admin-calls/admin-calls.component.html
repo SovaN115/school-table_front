@@ -1,0 +1,18 @@
+<section class="admin-calls">
+    <div class="">
+        <form [formGroup]="form">
+            <table class="w-full border-collapse border">
+                <tr class="p-4 rounded-lg bg-gray-100 border">
+                    <th class="p-4 border">№ урока</th>
+                    <th class="p-4 border">Начало</th>
+                    <th class="p-4 border">Конец</th>
+                    <th class="p-4 border">Перемена</th>
+                </tr>
+    
+                <tr *ngFor="let call of calls" (updated)="update()" [id]="call.id" [lesson]="call.lesson_number" [start]="call.lesson_start" [finish]="call.lesson_finish" [break]="call.break" class="p-4 rounded-lg border" admin-call>
+                </tr>
+    
+            </table>
+        </form>
+    </div>
+</section>

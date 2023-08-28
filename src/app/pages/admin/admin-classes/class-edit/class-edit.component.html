@@ -1,0 +1,8 @@
+<section class="admin-teacher-add pt-20">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form flex flex-col w-full p-4 max-w-sm mx-auto justify-center border-blue-600 border rounded-lg gap-4">
+        <h4 class="form-title text-center text-xl">Редактировать класс</h4>
+        <input formControlName="group" type="text" placeholder="Название класса" class="px-4 py-2 bg-gray-100 rounded-lg">
+        <input formControlName="students" type="text" placeholder="Количество человек" class="px-4 py-2 bg-gray-100 rounded-lg">
+        <input type="submit" value="Сохранить" class="px-4 py-2 bg-green-400 rounded-lg text-white">
+    </form>
+</section>

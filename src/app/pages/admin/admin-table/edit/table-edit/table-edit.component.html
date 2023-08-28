@@ -1,0 +1,15 @@
+<section class="admin-teacher-add pt-20">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form flex flex-col w-full p-4 max-w-sm mx-auto justify-center border-blue-600 border rounded-lg gap-4">
+        <h4 class="form-title text-center text-xl">Редактировать ячейку</h4>
+        <span *ngIf="error" class="rounded-lg bg-red-500 text-white px-4 py-2">{{message}}</span>
+        <label for="lesson">Предмет</label>
+        <select formControlName="lesson" id="lesson" class="p-2 bg-gray-100 rounded-lg">
+            <option *ngFor="let lesson of lessons" value="{{lesson.id}}">{{lesson.lesson}}   {{lesson.teacher?.surname}} {{lesson.teacher?.name}}</option>
+        </select>
+        <label for="cabinet">Кабинет</label>
+        <select formControlName="cabinet" id="cabinet" class="p-2 bg-gray-100 rounded-lg">
+            <option *ngFor="let cabinet of cabinets" value="{{cabinet.id}}">{{cabinet.room}}</option>
+        </select>
+        <input type="submit" value="Сохранить" class="px-4 py-2 bg-green-400 rounded-lg text-white">
+    </form>
+</section>

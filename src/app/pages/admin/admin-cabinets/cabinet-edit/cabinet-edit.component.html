@@ -1,0 +1,7 @@
+<section class="admin-teacher-add pt-20">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form flex flex-col w-full p-4 max-w-sm mx-auto justify-center border-blue-600 border rounded-lg gap-4">
+        <h4 class="form-title text-center text-xl">Редактировать кабинет</h4>
+        <input formControlName="cabinet" type="text" placeholder="Номер кабинета" class="px-4 py-2 bg-gray-100 rounded-lg">
+        <input type="submit" value="Сохранить" class="px-4 py-2 bg-green-400 rounded-lg text-white">
+    </form>
+</section>

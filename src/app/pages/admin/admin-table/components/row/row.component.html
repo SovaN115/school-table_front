@@ -1,0 +1,4 @@
+<td [hidden]="index % days != 0" [rowSpan]="days" class="p-4 border">{{data.class.name}}</td>
+<td class="p-4 border h-40">{{data.day.day}}</td>
+<td *ngFor="let section of data.sections" (deleted)="onDelete()" [cabinet]="section.cabinet" [lesson]="section.lesson" [call]="section.call" [section_id]="section.section_id"  class="p-4 border h-40" table-section></td>
+

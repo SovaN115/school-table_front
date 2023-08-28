@@ -1,0 +1,71 @@
+<div class="app h-screen flex flex-col max-w-7xl mx-auto">
+    <header class="header p-4 flex justify-between ">
+        <div class="header-logo-container text-blue-600">
+            <a routerLink="/admin">Расписание</a>
+        </div>
+        <nav class="header-nav">
+            <ul class="header-list flex gap-4">
+    
+                <li class="hesder-list-item">
+                    <a routerLink="./" class="header-nav-link hover:text-blue-600">Главная</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="teachers" class="header-nav-link hover:text-blue-600">Учителя</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="classes" href="" class="header-nav-link hover:text-blue-600">Классы</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="lessons" href="" class="header-nav-link hover:text-blue-600">Уроки</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="cabinets" href="" class="header-nav-link hover:text-blue-600">Кабинеты</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="calls" href="" class="header-nav-link hover:text-blue-600">Звонки</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main flex-grow p-4 flex flex-col gap-6">
+        <router-outlet></router-outlet>
+    </main>
+    <footer class="p-4 flex justify-between bg-blue-600">
+        <div class="footer-logo-container text-white">
+            <a routerLink="/admin">Расписание</a>
+        </div>
+        <nav class="footer-nav">
+            <ul class="footer-list flex gap-4">
+    
+                <li class="hesder-list-item">
+                    <a routerLink="./" class="footer-nav-link text-white border-b-white hover:border-b p-1">Главная</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="teachers" class="footer-nav-link text-white border-b-white hover:border-b p-1">Учителя</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="classes" class="footer-nav-link text-white border-b-white hover:border-b p-1">Классы</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="lessons" class="footer-nav-link text-white border-b-white hover:border-b p-1">Уроки</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="cabinets" class="footer-nav-link text-white border-b-white hover:border-b p-1">Кабинеты</a>
+                </li>
+    
+                <li class="hesder-list-item">
+                    <a routerLink="calls" class="footer-nav-link text-white border-b-white hover:border-b p-1">Звонки</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>    
+</div>

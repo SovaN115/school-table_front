@@ -1,0 +1,14 @@
+<section class="admin-teachers">
+    <div class="flex justify-between">
+        <a routerLink="create" class="py-2 px-4 border border-blue-600 rounded-lg"> 
+            Создать
+        </a>
+    </div>
+    <div class="">
+        <table class="w-full border-spacing-y-8 border-separate">
+            
+            <tr *ngFor="let lesson of lessons" (delete)="update()" [id]="lesson.id" [lesson]="lesson.lesson" [teacherName]="lesson.teacher?.name" [teacherSurname]="lesson.teacher?.surname" [teacherPatronymic]="lesson.teacher?.patronymic" class="p-4 shadow-md rounded-lg" admin-lesson>
+            </tr>
+        </table>
+    </div>
+</section>
